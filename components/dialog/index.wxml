@@ -1,0 +1,32 @@
+<!--components/dialog/index.wxml-->
+<view class='container' style="display: {{isShow ? '' : 'none'}}">
+  <view class='c-title'>
+    <text>提示信息</text>
+  </view>
+  <view class='c-content'>
+    <view wx:if="{{isPass}}">
+      <view>
+        <text>恭喜回答正确！</text>
+      </view>
+    </view>
+    <view wx:else>
+      <view>
+        <text>回答错误，要不再试试？</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='c-btn'>
+    <view class="btn-success" wx:if="{{isPass}}" bindtap='onNext'>
+      <text>下一题</text>
+    </view>
+    <view class='btn-error' wx:else>
+      <view class='btn-retry' bindtap='onRetry'>
+        <text>再试试</text>
+      </view>
+      <view class="btn-ignore" bindtap='onNext'>
+        <text>跳过</text>
+      </view>
+    </view>
+  </view>
+</view>

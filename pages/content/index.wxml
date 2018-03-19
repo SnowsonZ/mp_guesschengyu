@@ -1,0 +1,42 @@
+<!--pages/content/index.wxml-->
+<view style='position: relative;'>
+  <view class='container'>
+    <view class='ads'>
+      <text>【您已获得一个红包，打开支付宝即可领取】</text>
+    </view>
+    <view class='c-display'>
+      <view class='display-others'></view>
+      <view class='display-content'>
+        <image class="content-img" src='{{curImgUrl}}'></image>
+      </view>
+      <view class='display-opts'>
+        <button class='btn-alert' bindtap='onPrompt' size='mini'>
+          提示
+        </button>
+        <button open-type="share" class='btn-share' size='mini'>
+          分享
+        </button>
+      </view>
+    </view>
+    <view class='c-opts'>
+      <view class='opts-others'></view>
+      <view class='opts-content' bindtap='onSelected'>
+        <block wx:key='this' wx:for="{{selectedContent}}" wx:for-item="item">
+          <view class="content-input" id='result_{{item.index}}' data-id='{{item.index}}' data-content='{{item.content}}'>
+            <text data-id='{{item.index}}' data-content='{{item.content}}'>{{item.content}}</text>
+          </view>
+        </block>
+      </view>
+      <view class='opts-score'></view>
+    </view>
+    <view class='c-select' bindtap='onSelect'>
+      <block wx:for="{{selectContent}}" wx:for-index="i" wx:for-item="content" wx:key="this">
+        <view class='select-index' data-content='{{content}}' id='select_{{i}}'>
+          <text data-content='{{content}}'>{{content}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!--弹窗  -->
+  <dialog is-show="{{isComplete}}" is-pass="{{isTrue}}" bindonNext="generateNewData"/>
+</view>

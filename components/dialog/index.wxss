@@ -1,0 +1,74 @@
+/* components/dialog/index.wxss */
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 20%;
+  min-height: 260rpx;
+  border-radius: 20rpx;
+  padding: 30rpx 20rpx;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.c-title {
+  height: 10%;
+  color: white;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.c-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 26rpx;
+  height: 60%;
+  margin: 30rpx;
+}
+
+.c-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 26rpx;
+}
+
+.btn-success, .btn-retry {
+  padding: 6rpx 28rpx;
+  border-width: 4rpx;
+  border-radius: 10rpx;
+  color: #259f3d;
+  background-color: #9bff14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ignore {
+  padding: 6rpx 44rpx;
+  border-width: 4rpx;
+  border-radius: 10rpx;
+  color: white;
+  background-color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-error {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}

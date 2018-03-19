@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/content/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "看图猜成语",
+    "navigationBarTextStyle": "black",
+    "backgroudColor": "red"
+  }
+}
